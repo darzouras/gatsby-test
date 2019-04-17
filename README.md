@@ -95,3 +95,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+#DARLENE THESE ARE YOUR OWN NOTES
+
+Live example can be found at [fierce-steel.surge.sh](https://fierce-steel.surge.sh).
+To update this sample you can type `surge public fierce-steel.surge.sh` from the root folder.
