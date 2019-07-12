@@ -1,9 +1,10 @@
 import React from "react"
+/* import Links from "../components/links" */
 import { Link } from "gatsby"
+import styles from "./nav.module.css"
 
-export default() => (
-    <nav>
-        <h2>Pages</h2>
+export default () => (
+    <nav id="nav" className={styles.nav}>
         <ul>
             <li>
                 <Link to="/">Home</Link>

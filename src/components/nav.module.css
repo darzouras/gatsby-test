@@ -1,0 +1,9 @@
+.nav {
+    position: fixed;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        position: relative;
+    }
+}
