@@ -6,7 +6,7 @@ export default () => (
     <div style={{ color: `purple` }}>
         <Header headerText="Hello Header!" />
         <p>What a world.</p>
-        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <img src="https://placekitten.com/400/200" alt="" />
 
         <Nav />
     </div>
