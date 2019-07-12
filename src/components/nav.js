@@ -16,5 +16,9 @@ export default () => (
                 <Link to="/about-css-modules/">CSS Modules</Link>
             </li>
         </ul>
+
+        <div id="nav-pull" className={styles.nav_pull}>
+            v
+        </div>
     </nav>
 )

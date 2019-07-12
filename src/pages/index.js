@@ -4,9 +4,10 @@ import Nav from "../components/nav"
 
 export default () => (
     <div class="main">
-        <Header headerText="Hello test!" />
 
         <Nav />
+
+        <Header headerText="Hello test!" />
 
         <p>What a world.</p>
         <img src="https://placekitten.com/400/200" alt="" />
