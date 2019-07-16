@@ -1,7 +1,6 @@
 .window {
     position: relative;
     width: 90%;
-    max-width: 600px;
     margin: 25px auto;
     background: #e0e0ce;
     color: #111;
@@ -11,10 +10,9 @@
 
 @media (min-width: 768px) {
     .window {
-        width: 40%;
-        height: 70vh;
-        max-width: 550px;
-        margin: 25px 25px auto auto;
+        width: 90%;
+        grid-column: 3 / 6;
+        grid-row: 1 / 5;
     }
 
     .window_inner::-webkit-scrollbar,
