@@ -6,6 +6,8 @@
         height: 100vh;
         grid-template-columns: calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5);
         grid-template-rows: calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5);
+        align-items: center;
+        justify-items: center;
     }
 }
 
