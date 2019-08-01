@@ -13,13 +13,11 @@ export default ({ data }) => {
             <Header headerText="Blog" />
 
             {edges.map(edge => {
-                const { frontmatter } = edge.node
                 return (
                     <div className="blog-post">
-                        <h2>{frontmatter.title}</h2>
-                        <p>
-                            {edge.node.html}
-                        </p>
+                        <h2>{edge.node.frontmatter.title}</h2>
+                        <div dangerouslySetInnerHTML={{ __html: edge.node.html }}>
+                        </div>
                     </div>
                 )
             })}

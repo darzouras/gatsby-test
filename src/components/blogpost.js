@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { allMarkdownRemark } = data // data.markdownRemark holds our post data
+  const { frontmatter, html } = allMarkdownRemark
   return (
     <Layout>
       <div className="blog-post-container">
@@ -24,12 +24,17 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($date: Date) {
-    markdownRemark(frontmatter: { date: { eq: $date } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
+  query {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "//blog//"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            description
+          }
+          html
+        }
       }
     }
   }
