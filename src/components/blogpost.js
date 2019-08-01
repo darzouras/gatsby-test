@@ -1,41 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Header from "../components/header"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { allMarkdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = allMarkdownRemark
+const Template = (props) => {
+
+  const data = props.data.markdownRemark
+  console.log(data)
+
   return (
     <Layout>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
-    </ Layout>
+      <Header headerText={data.frontmatter.title} />
+
+      <div className="blogpost"
+        dangerouslySetInnerHTML={{ __html: data.html }}></div>
+    </Layout>
   )
 }
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "//blog//"}}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            description
-          }
-          html
-        }
+export const query = graphql`
+  query($date: Date) {
+        markdownRemark(frontmatter: {date: {eq: $date}}) {
+        html
+      frontmatter {
+        title
+        date
       }
     }
   }
 `
+
+export default Template
