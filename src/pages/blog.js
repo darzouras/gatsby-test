@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Header from "../components/header"
 import Layout from "../components/layout"
 
@@ -13,9 +13,11 @@ export default ({ data }) => {
             <Header headerText="Blog" />
 
             {edges.map(edge => {
+                const slug = "/blog/" + edge.node.frontmatter.title.replace(/\s+/g, '-')
+                console.log(slug)
                 return (
                     <div className="blog-post">
-                        <h2>{edge.node.frontmatter.title}</h2>
+                        <h2><Link to={slug}>{edge.node.frontmatter.title}</Link></h2>
                         <div dangerouslySetInnerHTML={{ __html: edge.node.html }}>
                         </div>
                     </div>
