@@ -27,7 +27,7 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
-          - {label: About Page Content, name: content, widget: markdown}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: "Home"
         name: "home"
         file: "content/pages/home.md"
