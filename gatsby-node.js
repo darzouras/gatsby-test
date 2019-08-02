@@ -29,7 +29,9 @@ exports.createPages = ({ actions, graphql }) => {
             createPage({
                 path: "blog/" + node.frontmatter.title.replace(/\s+/g, '-'),
                 component: blogPostTemplate,
-                context: {}, // additional data can be passed via context
+                context: {
+                    node
+                }, // additional data can be passed via context
             })
         })
     })

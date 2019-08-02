@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
     const { edges } = data.allMarkdownRemark
-    console.log(edges)
+
     return (
         <Layout>
 
@@ -14,7 +14,7 @@ export default ({ data }) => {
 
             {edges.map(edge => {
                 const slug = "/blog/" + edge.node.frontmatter.title.replace(/\s+/g, '-')
-                console.log(slug)
+
                 return (
                     <div className="blog-post">
                         <h2><Link to={slug}>{edge.node.frontmatter.title}</Link></h2>
