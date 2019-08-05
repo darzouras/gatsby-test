@@ -13,6 +13,8 @@
         width: 90%;
         grid-column: 2 / 6;
         grid-row: 1 / 5;
+        max-height: 60vh;
+        overflow-y: scroll;
     }
 
     .window_inner::-webkit-scrollbar,
