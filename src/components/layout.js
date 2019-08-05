@@ -6,20 +6,23 @@ import Tunes from "../components/tunes"
 import styles from "./layout.module.css"
 
 
-export default ({ children }) => (
-    <div className={styles.grid}>
+export default ({ children }) => {
 
-        <Nav />
+    return (
+        <div className={styles.grid}>
 
-        <Window>
-            <div class={styles.content}>
+            <Nav />
 
-                {children}
+            <Window>
+                <div class={styles.content}>
 
-            </div>
-        </Window>
+                    {children}
 
-        <Tunes />
+                </div>
+            </Window>
 
-    </div>
-)
+            <Tunes iframeSrc="https://open.spotify.com/embed/playlist/37i9dQZF1E4xrPeIxCx9BP" />
+
+        </div>
+    )
+}

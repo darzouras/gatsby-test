@@ -12,11 +12,11 @@ export default ({ data }) => {
 
             <Header headerText="Blog" />
 
-            {edges.map(edge => {
+            {edges.map((edge, i) => {
                 const slug = "/blog/" + edge.node.frontmatter.title.replace(/\s+/g, '-')
 
                 return (
-                    <div className="blog-post">
+                    <div className="blog-post" key={i}>
                         <h2><Link to={slug}>{edge.node.frontmatter.title}</Link></h2>
                         <div dangerouslySetInnerHTML={{ __html: edge.node.html }}>
                         </div>

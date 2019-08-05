@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "./tunes.module.css"
 
-export default () => (
+export default (props) => (
     <div className={styles.tunes}>
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4xrPeIxCx9BP" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="spotify-playlist"></iframe>
+        <iframe src={props.iframeSrc} frameBorder="0" allowtransparency="true" allow="encrypted-media" title="spotify-playlist"></iframe>
     </div>
 )
