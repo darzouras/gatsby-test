@@ -11,8 +11,6 @@ export default (props) => {
       <Header headerText={data.frontmatter.title} />
 
       <div dangerouslySetInnerHTML={{ __html: data.html }}>
-
-        <p>{data.frontmatter.testfield}</p>
       </div>
     </Layout>
   )
