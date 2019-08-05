@@ -12,7 +12,7 @@ export default ({ children }) => (
         <Nav />
 
         <Window>
-            <div class="content">
+            <div class={styles.content}>
 
                 {children}
 

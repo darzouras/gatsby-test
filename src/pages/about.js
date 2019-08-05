@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
     const about = data.allMarkdownRemark.edges[0].node
-    console.log(about)
+    // console.log(about)
 
     return (
         < Layout >
@@ -20,9 +20,9 @@ export default ({ data }) => {
             <p>{about.frontmatter.testfield}</p>
 
             <ul>
-                {about.frontmatter.testlist.map(edge => {
+                {about.frontmatter.testlist.map((edge, i) => {
                     return (
-                        <li>{edge}</li>
+                        <li key={i}>{edge}</li>
                     )
                 })}
             </ul>
