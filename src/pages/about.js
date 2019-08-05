@@ -6,7 +6,8 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
     const about = data.allMarkdownRemark.edges[0].node
-    console.log(about)
+    // console.log(about)
+
     return (
         < Layout >
 
