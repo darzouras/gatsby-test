@@ -19,6 +19,14 @@ export default ({ data }) => {
 
             <p>{about.frontmatter.testfield}</p>
 
+            <ul>
+                {about.frontmatter.testlist.map(edge => {
+                    return (
+                        <li>{edge}</li>
+                    )
+                })}
+            </ul>
+
         </Layout >
     )
 }
@@ -33,6 +41,7 @@ export const query = graphql`
                         title
                         description
                         testfield
+                        testlist
                     }
                     html
                 }
