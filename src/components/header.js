@@ -1,8 +1,13 @@
 import React from "react"
-import styles from "./header.module.css"
+import styled from "@emotion/styled"
+// import { css } from "@emotion/core"
+
+const headerStyle = styled.div`
+    width: 100%;
+`
 
 export default (props) => (
-    < div className={styles.header} >
+    < div css={headerStyle} >
         <h1>{props.headerText}</h1>
     </div >
 )

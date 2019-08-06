@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 
 export default (props) => {
-  const data = props.pathContext.node
+  const data = props.pageContext.node
   // console.log(data)
 
   return (
