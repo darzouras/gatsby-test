@@ -4,7 +4,6 @@ import Header from "../components/header"
 
 export default (props) => {
   const data = props.pageContext.node
-  // console.log(data)
 
   return (
     <Layout>
