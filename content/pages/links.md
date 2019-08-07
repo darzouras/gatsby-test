@@ -1,8 +1,8 @@
 ---
-homepageLink: 'https://darzouras.com'
-githubLink: 'https://github.com/darzouras'
-linkedinLink: 'http://linkedin.com/in/darlenezouras'
-twitterLink: 'http://twitter.com/darzouras'
-instagramLink: 'http://instagram.com/darzouras'
+homepage: 'https://darzouras.com'
+github: 'https://github.com/darzouras'
+linkedin: 'http://linkedin.com/in/darlenezouras'
+twitter: 'http://twitter.com/darzouras'
+instagram: 'http://instagram.com/darzouras'
 ---
 

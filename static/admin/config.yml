@@ -26,11 +26,11 @@ collections:
         name: "links"
         file: "content/pages/links.md"
         fields:
-          - {label: "Homepage Link", name: "homepageLink", widget: string}
-          - {label: "Github Link", name: "githubLink", widget: string}
-          - {label: "LinkedIn Link", name: "linkedinLink", widget: string}
-          - {label: "Twitter Link", name: "twitterLink", widget: string}
-          - {label: "Instagram Link", name: "instagramLink", widget: string}
+          - {label: "Homepage Link", name: "homepage", widget: string}
+          - {label: "Github Link", name: "github", widget: string}
+          - {label: "LinkedIn Link", name: "linkedin", widget: string}
+          - {label: "Twitter Link", name: "twitter", widget: string}
+          - {label: "Instagram Link", name: "instagram", widget: string}
       - label: "Home"
         name: "home"
         file: "content/pages/home.md"
