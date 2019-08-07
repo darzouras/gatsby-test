@@ -30,22 +30,14 @@ const Window = styled.div`
     @media (min-width:768px) {
         grid-column: 2/6;
         grid-row: 1/5;
-        max-height: 60vh;
+        height: 60vh;
         overflow-y: auto;
     }
 `
 
-const ContainedWindow = styled.div`
-    @media (min-width:768px) {
-        height: 100%;
-        width: 100%;
-    }
-`
 
 export default ({ children }) => (
     <Window>
-        <ContainedWindow>
-            {children}
-        </ContainedWindow>
+        {children}
     </Window>
 )
