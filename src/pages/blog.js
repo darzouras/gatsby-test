@@ -2,7 +2,22 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Header from "../components/header"
 import Layout from "../components/layout"
+import styled from "@emotion/styled"
 
+const BlogLink = styled.h2`
+    a {
+        color: #ce0e2d;
+        font-size: 2em;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+`
+
+const BlogListing = styled.article`
+    margin-bottom: 50px;
+`
 
 export default ({ data }) => {
     const { edges } = data.allMarkdownRemark
@@ -16,11 +31,10 @@ export default ({ data }) => {
                 const slug = "/blog/" + edge.node.frontmatter.title.replace(/\s+/g, '-')
 
                 return (
-                    <div className="blog-post" key={i}>
-                        <h2><Link to={slug}>{edge.node.frontmatter.title}</Link></h2>
-                        <div dangerouslySetInnerHTML={{ __html: edge.node.html }}>
-                        </div>
-                    </div>
+                    <BlogListing key={i}>
+                        <BlogLink><Link to={slug}>{edge.node.frontmatter.title}</Link></BlogLink>
+                        <div dangerouslySetInnerHTML={{ __html: edge.node.html }}></div>
+                    </BlogListing>
                 )
             })}
 
