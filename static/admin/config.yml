@@ -21,6 +21,23 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - label: "Links"
+        name: "links"
+        description: "Links to social media and personal website"
+        file: "content/pages/main.md"
+        fields:
+          - {label: "Homepage Link", name: "homepageLink", widget: string}
+          - {label: "Github Link", name: "githubLink", widget: string}
+          - {label: "LinkedIn Link", name: "linkedinLink", widget: string}
+          - {label: "Twitter Link", name: "twitterLink", widget: string}
+          - {label: "Instagram Link", name: "instagramLink", widget: string}
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Home Page Content, name: content, widget: markdown}
       - label: "About"
         name: "about"
         file: "content/pages/about.md"
@@ -30,10 +47,4 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: TestField, name: "testfield", widget: string}
           - {label: TestList, name: "testlist", widget: list, field: {label: thing, name: thing, widget: string}}
-      - label: "Home"
-        name: "home"
-        file: "content/pages/home.md"
-        fields:
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Home Page Content, name: content, widget: markdown}
+      
