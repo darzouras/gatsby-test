@@ -8,7 +8,7 @@ const LinkWrapper = styled.aside`
     width: 90%;
     margin: auto;
     color:  #e0e0ce;
-    background: #3d2c49;
+    background: #111;
     border-radius: 10px;
     font-size: 1.7em;
 
