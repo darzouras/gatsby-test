@@ -1,19 +1,34 @@
 import React from "react"
 import Nav from "../components/nav"
 import Window from "../components/window"
+import { css } from "@emotion/core"
 
-import styles from "./layout.module.css"
+const contentStyle = css`
+    margin: 25px auto;
+    width: 90%;
+`
 
+const gridStyle = css`
+    @media (min-width: 768px) {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5);
+        grid-template-rows: calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5) calc(100% / 5);
+        align-items: center;
+        justify-items: center;
+    }
+`
 
 export default ({ children }) => {
 
     return (
-        <div className={styles.grid}>
+        <div css={gridStyle}>
 
             <Nav />
 
             <Window>
-                <div class={styles.content}>
+                <div id="content" css={contentStyle}>
 
                     {children}
 
