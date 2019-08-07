@@ -26,6 +26,10 @@ const LinkList = styled.ul`
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
+
+    @media (min-width:768px) {
+        padding: 15px;
+    }
 `
 
 const LinkListItem = styled.li`
