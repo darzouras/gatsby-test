@@ -20,10 +20,10 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages"
     label: "Pages"
+    delete: "false"
     files:
       - label: "Links"
         name: "links"
-        description: "Links to social media and personal website"
         file: "content/pages/main.md"
         fields:
           - {label: "Homepage Link", name: "homepageLink", widget: string}
