@@ -1,6 +1,7 @@
 import React from "react"
 import Nav from "../components/nav"
 import Window from "../components/window"
+import LinkList from "../components/linklist"
 import { css } from "@emotion/core"
 
 const contentStyle = css`
@@ -34,6 +35,8 @@ export default ({ children }) => {
 
                 </div>
             </Window>
+
+            <LinkList />
         </div>
     )
 }

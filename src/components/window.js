@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const Window = styled.div`
+const Window = styled.main`
     position: relative;
     width: 90%;
     margin: 25px auto;
@@ -32,6 +32,7 @@ const Window = styled.div`
         grid-row: 1/5;
         height: 60vh;
         overflow-y: auto;
+        z-index: 1;
     }
 `
 
