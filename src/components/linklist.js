@@ -6,7 +6,7 @@ import { FaHandPeace, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react
 const LinkWrapper = styled.aside`
     position: relative;
     width: 90%;
-    margin: auto;
+    margin: 0 auto 25px;
     color:  #e0e0ce;
     background: #111;
     border-radius: 10px;

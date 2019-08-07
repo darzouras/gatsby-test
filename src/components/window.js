@@ -8,7 +8,7 @@ const Window = styled.main`
     background: #e0e0ce;
     color: #111;
     border-radius: 10px;
-    border: 3px solid #ce0e2d;
+    border: 3px solid #111;
     scrollbar-color: #ce0e2d transparent;
     scrollbar-3dlight-color: transparent;
     scrollbar-arrow-color: transparent;
