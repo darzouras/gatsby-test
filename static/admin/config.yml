@@ -24,7 +24,7 @@ collections:
     files:
       - label: "Links"
         name: "links"
-        file: "content/pages/main.md"
+        file: "content/pages/links.md"
         fields:
           - {label: "Homepage Link", name: "homepageLink", widget: string}
           - {label: "Github Link", name: "githubLink", widget: string}
