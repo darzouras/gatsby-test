@@ -1,10 +1,12 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 import styled from "@emotion/styled"
 import { FaHandPeace, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 const LinkWrapper = styled.aside`
     position: relative;
-    margin: 25px;
+    width: 90%;
+    margin: auto;
     color:  #e0e0ce;
     background: #3d2c49;
     border-radius: 10px;
@@ -41,24 +43,64 @@ const LinkListItem = styled.li`
     }
 `
 
+const LinkComponent = ({ data }) => {
+    const links = data.allMarkdownRemark.nodes[0].frontmatter
+    return (
+        < LinkWrapper >
+            <LinkList>
+                {links.homepage &&
+                    <LinkListItem>
+                        <a href={links.homepage} target="_blank" rel="noopener noreferrer">< FaHandPeace /></a>
+                    </LinkListItem>
+                }
+
+                {links.github &&
+                    <LinkListItem>
+                        <a href={links.github} target="_blank" rel="noopener noreferrer">< FaGithub /></a>
+                    </LinkListItem>
+                }
+
+                {links.linkedin &&
+                    <LinkListItem>
+                        <a href={links.linkedin} target="_blank" rel="noopener noreferrer">< FaLinkedin /></a>
+                    </LinkListItem>
+                }
+
+                {links.twitter &&
+                    <LinkListItem>
+                        <a href={links.twitter} target="_blank" rel="noopener noreferrer">< FaTwitter /></a>
+                    </LinkListItem>
+                }
+
+                {links.instagram &&
+                    <LinkListItem>
+                        <a href={links.instagram} target="_blank" rel="noopener noreferrer">< FaInstagram /></a>
+                    </LinkListItem>
+                }
+
+            </LinkList>
+        </ LinkWrapper >
+    )
+}
+
 export default () => (
-    <LinkWrapper>
-        <LinkList>
-            <LinkListItem>
-                <a href="https://darzouras.com" target="_blank" rel="noopener noreferrer">< FaHandPeace /></a>
-            </LinkListItem>
-            <LinkListItem>
-                <a href="https://github.com/darzouras" target="_blank" rel="noopener noreferrer">< FaGithub /></a>
-            </LinkListItem>
-            <LinkListItem>
-                <a href="http://linkedin.com/in/darlenezouras" target="_blank" rel="noopener noreferrer">< FaLinkedin /></a>
-            </LinkListItem>
-            <LinkListItem>
-                <a href="https://twitter.com/darzouras" target="_blank" rel="noopener noreferrer">< FaTwitter /></a>
-            </LinkListItem>
-            <LinkListItem>
-                <a href="https://www.instagram.com/darzouras/" target="_blank" rel="noopener noreferrer">< FaInstagram /></a>
-            </LinkListItem>
-        </LinkList>
-    </LinkWrapper>
+    <StaticQuery
+        query={graphql`
+            query {
+                allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/links/"}}, limit: 1) {
+                    nodes {
+                        frontmatter {
+                            homepage
+                            github
+                            linkedin
+                            twitter
+                            instagram
+                        }
+                    }
+                }
+            }
+        `}
+
+        render={data => <LinkComponent data={data} />}
+    />
 )

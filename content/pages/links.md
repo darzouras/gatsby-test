@@ -1,5 +1,4 @@
 ---
-homepage: 'https://darzouras.com'
 github: 'https://github.com/darzouras'
 linkedin: 'http://linkedin.com/in/darlenezouras'
 twitter: 'http://twitter.com/darzouras'
